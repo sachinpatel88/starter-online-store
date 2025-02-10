@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(30, 53, 53);
+  background-color: #6A5D7B;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,28 +21,39 @@ body {
   min-height: 100vh;
 }
 
+p {
+  margin: 8px;
+}
+
 button {
   border-radius: 8px;
   border: none;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 14px;
+  font-size: 1.1em;
   font-weight: 500;
   font-family: inherit;
   color: black;
-  background-color:rgb(210, 210, 210);
+  width: 100%;
+  background-color: #372B3B;
+  color: #C0B9CA;
   cursor: pointer;
   height: fit-content;
   transition: background-color 0.25s;
 }
 
 button:hover {
-  background-color:  white;
+  background-color: #322737;
 }
 
-.product-container{
+.card-container{
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #5D4A66;
+  border: 1px solid #594561;
+  border-radius: 22px;
+  transition: box-shadow 0.5s;
+  box-shadow: 3px 1px 7px #57465f;
 }
 
 .product-price-cta {
@@ -50,16 +61,16 @@ button:hover {
   justify-content: space-between;
   padding: 0 30px;
   align-items: center;
+  flex-direction: column;
+  font-weight: 700;
 }
 
 .product-image {
   height: auto;
   width: 50%;
   border-radius: 10px;
-  box-shadow: 5px 5px 15px rgb(41, 69, 69); 
-  transition: box-shadow 0.5s;
 }
 
-.product-image:hover {
-  box-shadow: 5px 5px 15px rgb(25, 43, 43);
+.stripe-widget {
+  width: 400px;
 }
