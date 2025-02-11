@@ -1,8 +1,10 @@
 import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js"
+import { useState } from "react"
 
 const PaymentForm = ({ intentId }) => {
   const stripe = useStripe()
   const elements = useElements()
+  const [error, setError] = useState()
 
   const handleSubmit = async (event) => {
     // We don't want to let default form submission happen here,
@@ -25,8 +27,10 @@ const PaymentForm = ({ intentId }) => {
 
     if (result.error) {
       // Show error to your customer (for example, payment details incomplete)
+      setError(result.error.message)
       console.log(result.error.message)
     } else {
+      setError("")
       // Your customer will be redirected to your `return_url`. For some payment
       // methods like iDEAL, your customer will be redirected to an intermediate
       // site first to authorize the payment, then redirected to the `return_url`.
@@ -48,6 +52,7 @@ const PaymentForm = ({ intentId }) => {
           Submit
         </button>
       </form>
+      {error}
     </>
   )
 }

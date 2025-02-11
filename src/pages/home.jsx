@@ -12,7 +12,7 @@ const Home = () => {
           `${import.meta.env.VITE_API_ENDPOINT}/products`
         )
         const data = await response.json()
-        console.log(data)
+
         setProduct(data.products?.[0]) // Assuming one product for simplicity
       } catch (error) {
         console.error("Error fetching product data:", error)
@@ -36,7 +36,6 @@ const Home = () => {
         }
       ).then((res) => res.json())
 
-      console.log(data)
       if (data?.intentId) {
         navigate(`/order/payment/${data?.intentId}`)
         return

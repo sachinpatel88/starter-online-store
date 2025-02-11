@@ -15,8 +15,6 @@ const OrderStatusPage = () => {
     )
       .then((res) => res.json())
       .then(({ paymentIntent }) => {
-        console.log(paymentIntent)
-
         if (!paymentIntent.status) {
           setMessage("Something went wrong.")
           return
