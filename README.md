@@ -37,7 +37,15 @@ OR
 yarn install
 ```
 
-4. Start the development server:
+4. Create a `.env.local` file in the root of the project and add the following with your own values:
+
+```bash
+VITE_BASE_URL=http://localhost:5173
+VITE_API_ENDPOINT=http://localhost:4242
+VITE_STRIPE_PUBLIC_KEY=pk_test_51P55555555555555555555555555555555
+```
+
+5. Start the development server:
 
 ```bash
 npm run dev
@@ -45,4 +53,4 @@ OR
 yarn dev
 ```
 
-5. Open your browser and navigate to `http://localhost:5173` to view the application.
+6. Open your browser and navigate to `http://localhost:5173` to view the application.
